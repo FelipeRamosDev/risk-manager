@@ -1,14 +1,22 @@
-import { ThemeProvider } from 'styled-components/';
+// Contexts
+import CalcDataProvider from '@/controllers/contexts/calc-data';
+import ConfigDataProvider from '@/controllers/contexts/config-data';
+import ResultProvider from '@/controllers/contexts/result-data';
 
 // Styles
 import '../../styles/globals.css'
-import { defaultTheme } from '../../styles/theme';
 
 function App({ Component, pageProps }) {
   return (
-    <ThemeProvider theme={defaultTheme}>
-      <Component {...pageProps} />
-    </ThemeProvider>
+    <CalcDataProvider>
+      <ConfigDataProvider>
+        <ResultProvider>
+
+          <Component {...pageProps} />
+          
+        </ResultProvider>
+      </ConfigDataProvider>
+    </CalcDataProvider>
   )
 }
 

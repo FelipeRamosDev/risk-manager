@@ -1,25 +1,47 @@
 // Coolors pallete
-// https://coolors.co/02394a-2e0f15-f75c03-51cb20-ed1c24
+// https://coolors.co/009ccc-0fff95-ed254e-157145-ffc914-f22121
+
+export const currentTheme = 'dark';
+
+export const matrix = {
+    dark: {
+        primary:194,
+        secondary: 154,
+        tertiary: 348,
+        success: 151,
+        warn: 46,
+        danger: 0
+    }
+}
 
 export const defaultTheme = {
     primary: {
-        main: '#02394A',
-        hardDark: '#111617'
+        main: `hsl(${matrix[currentTheme].primary}, 100%, 40%)`,
+        dark: `hsl(${matrix[currentTheme].primary}, 25%, 15%)`,
+        hardDark: `hsl(${matrix[currentTheme].primary}, 15%, 10%)`
     },
     secondary: {
-        main: '#A8BA9A'
+        main: `hsl(${matrix[currentTheme].secondary}, 100%, 50%)`,
+        dark: `hsl(${matrix[currentTheme].secondary}, 25%, 15%)`,
+        hardDark: `hsl(${matrix[currentTheme].secondary}, 25%, 10%)`
     },
     tertiary: {
-        main: '#2F1B25'
+        soft: `hsl(${matrix[currentTheme].tertiary}, 75%,  60%)`,
+        main: `hsl(${matrix[currentTheme].tertiary}, 100%,  50%)`,
+        dark: `hsl(${matrix[currentTheme].tertiary}, 25%, 15%)`,
+        hardDark: `hsl(${matrix[currentTheme].tertiary}, 25%, 10%)`
     },
     success: {
-        main: '#0B5D1E'
+        main: `hsl(${matrix[currentTheme].success}, 69%,  26%)`
+    },
+    warn: {
+        main: `hsl(${matrix[currentTheme].warn}, 100%, 50%})`
     },
     danger: {
-        main: '#B80C09'
+        main: `hsl(${matrix[currentTheme].danger}, 100%, 62%)`
     },
     text: {
-        light: '#333',
-        dark: '#fff'
+        main: `hsl(${matrix[currentTheme].primary}, 2%, 80%)`,
+        dark: `hsl(${matrix[currentTheme].primary}, 3%, 3%)`
     }
 }

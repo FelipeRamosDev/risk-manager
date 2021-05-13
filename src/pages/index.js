@@ -1,10 +1,12 @@
-// Styles components
-import { Main } from '../../styles/main-styles';
+import CalculateRisk from '@/views/components/activities/calculate-risk';
+
+// Styles
+import mainStyles from 'styles/main.module.css';
 
 export default function Home() {
   return (
-    <Main>
-      <h1>Risk manager</h1>
-    </Main>
+    <div className={mainStyles.main}>
+      <CalculateRisk />
+    </div>
   )
 }

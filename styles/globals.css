@@ -4,6 +4,26 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    font-size: 15px;
+}
+
+h1 {
+  font-size: 2em;
+  text-align: center;
+}
+h2 {
+  font-size: 1.5em;
+  margin: 10px 0;
+  text-align: center;
+}
+h3 {
+  font-size: 1.3em;
+  margin: 10px 0;
+  text-align: center;
+}
+
+span {
+  margin: 0;
 }
 
 a {
@@ -13,4 +33,37 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+
+/* Theme */
+* {
+  --primary-hue: 194;
+  --secondary-hue: 154;
+  --tertiary-hue: 348;
+  --success-hue: 128;
+  --warn-hue: 46;
+  --danger-hue: 0;
+}
+* {
+  --primary-main: hsl(var(--primary-hue), 100%, 40%);
+  --primary-dark: hsl(var(--primary-hue), 25%, 15%);
+  --primary-hardDark: hsl(var(--primary-hue), 15%, 10%);
+
+  --secondary-main: hsl(var(--secondary-hue), 100%, 50%);
+  --secondary-soft: hsl(var(--secondary-hue), 75%, 50%);
+  --secondary-dark: hsl(var(--secondary-hue), 25%, 25%);
+  --secondary-hardDark: hsl(var(--secondary-hue), 25%, 10%);
+  
+  --tertiary-main: hsl(var(--tertiary-hue), 100%,  50%);
+  --tertiary-soft: hsl(var(--tertiary-hue), 75%,  50%);
+  --tertiary-dark: hsl(var(--tertiary-hue), 25%, 15%);
+  --tertiary-hardDark: hsl(var(--tertiary-hue), 25%, 10%);
+  
+  --success-main: hsl(var(--success-hue), 80%, 43%);
+  --warn-main: hsl(var(--warn-hue), 100%, 50%);
+  --danger-main: hsl(var(--danger-hue), 89%, 54%);
+
+  --text-main: hsl(var(--primary-hue), 2%, 80%);
+  --text-dark: hsl(var(--primary-hue), 3%, 3%);
 }

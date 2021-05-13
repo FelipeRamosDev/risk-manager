@@ -1,0 +1,108 @@
+.main {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 10vh 0 0 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow-y: scroll;
+    background-color: var(--primary-hardDark);
+    color: var(--text-main);
+}
+
+.container {
+    padding: 20px;
+}
+.containerx {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.containery {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.modal-header {
+    display: flex;
+    height: 50px;
+    background-color: var(--primary-hardDark);
+}
+.modal-header-item{
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+.modal-header-item[slot="middle"]{
+    flex: 1;
+}
+
+.flex-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.flex-container[line-space] {
+    margin-bottom: 10px;
+    flex-direction: row;
+}
+.flex-container[line-space]:last-child {
+    margin-bottom: 0;
+}
+.flex-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 48%;
+}
+.flex-item[value-field] {
+    width: 100%;
+    align-items: flex-end;
+}
+.flex-item[value-field] input{
+    color: var(--text-main);
+}
+.flex-item[value-field] .MuiInput-underline::before {
+    border-bottom: 2px solid var(--text-main) !important;
+}
+
+.card {
+    width: 100%;
+    max-width: 1200px;
+    border-radius: 10px;
+    background-color: var(--primary-dark);
+}
+.card-gradient {
+    background: linear-gradient(45deg, var(--primary-main), var(--secondary-soft));
+    border-radius: 10px;
+    overflow: hidden;
+}
+.card-gradient span{
+    color: #fff;
+}
+
+.action-button {
+    background-color: var(--tertiary-main);
+}
+
+.main-form {
+    /* padding: 0 20px; */
+}
+
+@media only screen and (max-width: 600px) {
+    .main {
+        padding: 2vh 0 5vh 0;
+    }
+    .flex-container{
+        flex-direction: column;
+    }
+    .flex-item{
+        width: 100%;
+    }
+    .config-wrap{
+        margin-bottom: 10px;
+    }
+}
