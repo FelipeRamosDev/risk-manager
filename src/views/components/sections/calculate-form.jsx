@@ -1,4 +1,5 @@
 // Material UI
+import { FilledInput, FormControl, Input, InputBase, InputLabel, makeStyles } from '@material-ui/core';
 import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
 import InputAdornment from '@material-ui/core/InputAdornment';
@@ -18,10 +19,22 @@ import { handleChanges, firstFocusInput, calculate } from '@/controllers/form-co
 import mainStyles from 'styles/main.module.css';
 import { defaultTheme } from 'styles/theme';
 
+const useStyles = makeStyles(()=>({
+    root: {
+  
+        borderBottomColor: 'red',
+        width: '100%',
+    },
+    textField: {
+        // border: '2px solid red'
+    }
+}))
+
 export default function CalculateFormSectionComponent() {
     const { calcData, setCalcData } = useCalcData();
     const { configData, setConfigData } = useConfigData();
     const { resultData, setResultData } = useResultData();
+    const classes = useStyles();
 
     return (
 
@@ -31,17 +44,18 @@ export default function CalculateFormSectionComponent() {
             <div className={`${mainStyles['flex-container']}`} line-space="">
                 <div value-field="" className={mainStyles['flex-item']}>
                     <TextField
+                        variant="filled"
                         label="Cotação atual"
                         style={{
                             width: '100%',
-                            
                         }}
                         InputProps={{
                             startAdornment: <InputAdornment position="start">R$</InputAdornment>,
                             type: 'number',
                         }}
-                        onChange={(ev)=> handleChanges({ev, data: calcData, setter: setCalcData, field: 'currentCotation', outType: 'number'})}
+                        color="secondary"
                         value={calcData.currentCotation}
+                        onChange={(ev)=> handleChanges({ev, data: calcData, setter: setCalcData, field: 'currentCotation', outType: 'number'})}
                         onFocus={()=> firstFocusInput({data: calcData, setter: setCalcData, field: 'currentCotation'})}
                     />
                 </div>
@@ -49,17 +63,18 @@ export default function CalculateFormSectionComponent() {
             <div className={`${mainStyles['flex-container']}`} line-space="">
                 <div value-field="" className={mainStyles['flex-item']}>
                     <TextField
+                        variant="filled"
                         label="Take profit"
                         style={{
                             width: '100%',
-                            
                         }}
                         InputProps={{
                             startAdornment: <InputAdornment position="start">R$</InputAdornment>,
                             type: 'number'
                         }}
-                        onChange={(ev)=> handleChanges({ev, data: calcData, setter: setCalcData, field: 'takeProfit', outType: 'number'})}
+                        color="secondary"
                         value={calcData.takeProfit}
+                        onChange={(ev)=> handleChanges({ev, data: calcData, setter: setCalcData, field: 'takeProfit', outType: 'number'})}
                         onFocus={()=> firstFocusInput({data: calcData, setter: setCalcData, field: 'takeProfit'})}
                     />
                 </div>
@@ -67,17 +82,18 @@ export default function CalculateFormSectionComponent() {
             <div className={`${mainStyles['flex-container']}`} line-space="" style={{ marginBottom: 0 }}>
                 <div value-field="" className={mainStyles['flex-item']}>
                     <TextField
+                        variant="filled"
                         label="Stop loss"
                         style={{
                             width: '100%',
-                            
                         }}
                         InputProps={{
                             startAdornment: <InputAdornment position="start">R$</InputAdornment>,
                             type: 'number'
                         }}
-                        onChange={(ev)=> handleChanges({ev, data: calcData, setter: setCalcData, field: 'stopLoss', outType: 'number'})}
+                        color="secondary"
                         value={calcData.stopLoss}
+                        onChange={(ev)=> handleChanges({ev, data: calcData, setter: setCalcData, field: 'stopLoss', outType: 'number'})}
                         onFocus={()=> firstFocusInput({data: calcData, setter: setCalcData, field: 'stopLoss'})}
                     />
                 </div>
@@ -89,9 +105,9 @@ export default function CalculateFormSectionComponent() {
             }}>
                 <Button
                     variant="contained"
-                    color="primary"
+                    color="secondary"
                     size="large"
-                    // startIcon={<ShowChartIcon />}
+                    startIcon={<ShowChartIcon />}
                     style={{
                         backgroundColor: 'var(--tertiary-soft)',
                         marginTop: '30px'

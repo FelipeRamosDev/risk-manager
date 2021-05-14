@@ -47,7 +47,7 @@ a {
 }
 * {
   --primary-main: hsl(var(--primary-hue), 100%, 40%);
-  --primary-dark: hsl(var(--primary-hue), 25%, 15%);
+  --primary-dark: hsl(var(--primary-hue), 28%, 15%);
   --primary-hardDark: hsl(var(--primary-hue), 15%, 10%);
 
   --secondary-main: hsl(var(--secondary-hue), 100%, 50%);
@@ -64,6 +64,29 @@ a {
   --warn-main: hsl(var(--warn-hue), 100%, 50%);
   --danger-main: hsl(var(--danger-hue), 89%, 54%);
 
-  --text-main: hsl(var(--primary-hue), 2%, 80%);
+  --text-main: hsl(var(--primary-hue), 2%, 90%);
+  --text-soft: hsl(var(--primary-hue), 2%, 47%);
+  --text-light: hsl(var(--primary-hue), 2%, 70%);
   --text-dark: hsl(var(--primary-hue), 3%, 3%);
+}
+
+.MuiTextField-root {
+  border-radius: 8px 8px 0 0;
+}
+.MuiTextField-root .MuiFormLabel-root {
+  color: var(--text-soft);
+}
+.MuiTextField-root .MuiInputBase-root.MuiFilledInput-root {
+  background-color: var(--primary-hardDark);
+  border-bottom: 2px solid var(--text-soft);
+  border-radius: 10px 10px 0 0;
+}
+.MuiTextField-root .MuiInputBase-root.MuiFilledInput-root.Mui-focused {
+  border-bottom: 0px solid var(--text-soft);
+}
+.MuiTextField-root .MuiInputBase-root .MuiInputAdornment-root p{
+  color: var(--text-soft);
+}
+.MuiTextField-root .MuiInputBase-root.Mui-focused .MuiInputAdornment-root p{
+  color: var(--secondary-main);
 }

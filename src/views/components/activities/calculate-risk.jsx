@@ -26,22 +26,17 @@ export default function CalculateRiskActivity(){
 
     return (<>
         <h1 style={{ textAlign: 'center', color: 'var(--text-main)' }}>{textPTBR.title}</h1>
-        <div className={`${mainStyles.card} ${mainStyles.container}`} style={{padding: '3%', width: '95%'}}>
+        <div className={`${mainStyles.card} ${mainStyles.container}`} style={{padding: '3%', width: '95%', boxShadow: '0 0 74px black'}}>
 
             <div className={mainStyles['flex-container']}>
                 <div className={`${mainStyles['flex-item']} ${mainStyles['config-wrap']}`} >
-
                     <ResultSection />
-
                 </div>
                 <div className={mainStyles['flex-item']}>
-
                     <ConfigDataSection />
                     <CalculateFormSection />
-
                 </div>
             </div>
-
         </div>
     </>)
 }

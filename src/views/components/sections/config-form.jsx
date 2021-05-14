@@ -21,6 +21,8 @@ export default function ConfigFormSectionComponent() {
             <div className={`${mainStyles['flex-container']}`} line-space="">
                 <div value-field="" className={mainStyles['flex-item']}>
                     <TextField
+                        variant="filled"
+                        color="secondary"
                         label="Saldo total"
                         style={{
                             width: '100%',
@@ -38,6 +40,8 @@ export default function ConfigFormSectionComponent() {
             <div className={`${mainStyles['flex-container']}`} line-space="">
                 <div value-field="" className={mainStyles['flex-item']}>
                     <TextField
+                        variant="filled"
+                        color="secondary"
                         label="Risco máximo"
                         style={{
                             width: '100%',
@@ -55,6 +59,8 @@ export default function ConfigFormSectionComponent() {
             <div className={`${mainStyles['flex-container']}`} line-space="">
                 <div value-field="" className={mainStyles['flex-item']}>
                     <TextField
+                        variant="filled"
+                        color="secondary"
                         label="Corretagem"
                         style={{
                             width: '100%',
@@ -73,6 +79,8 @@ export default function ConfigFormSectionComponent() {
             <div className={`${mainStyles['flex-container']}`} line-space="" style={{ marginBottom: 0 }}>
                 <div value-field="" className={mainStyles['flex-item']}>
                     <TextField
+                        variant="filled"
+                        color="secondary"
                         label="Risco/Recompensa"
                         style={{
                             width: '100%',

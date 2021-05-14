@@ -17,7 +17,7 @@ export const matrix = {
 export const defaultTheme = {
     primary: {
         main: `hsl(${matrix[currentTheme].primary}, 100%, 40%)`,
-        dark: `hsl(${matrix[currentTheme].primary}, 25%, 15%)`,
+        dark: `hsl(${matrix[currentTheme].primary}, 15%, 28%)`,
         hardDark: `hsl(${matrix[currentTheme].primary}, 15%, 10%)`
     },
     secondary: {
@@ -41,7 +41,7 @@ export const defaultTheme = {
         main: `hsl(${matrix[currentTheme].danger}, 100%, 62%)`
     },
     text: {
-        main: `hsl(${matrix[currentTheme].primary}, 2%, 80%)`,
+        main: `hsl(${matrix[currentTheme].primary}, 100%, 100%)`,
         dark: `hsl(${matrix[currentTheme].primary}, 3%, 3%)`
     }
 }

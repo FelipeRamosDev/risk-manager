@@ -10,7 +10,9 @@
     left: 0;
     right: 0;
     overflow-y: scroll;
-    background-color: var(--primary-hardDark);
+    background: url('../public/bg.svg'), radial-gradient(var(--primary-hardDark), var(--primary-dark));
+    background-repeat: no-repeat;
+    background-size: cover;
     color: var(--text-main);
 }
 
@@ -64,9 +66,6 @@
 }
 .flex-item[value-field] input{
     color: var(--text-main);
-}
-.flex-item[value-field] .MuiInput-underline::before {
-    border-bottom: 2px solid var(--text-main) !important;
 }
 
 .card {
