@@ -21,14 +21,15 @@ export default function ConfigModal({modalCtrl}){
 
     return (
         <div className={mainStyles['flex-container']} style={{
+            backgroundColor: 'hsl(194deg 13% 48% / 42%)',
+            backdropFilter: 'blur(15px)',
             justifyContent: 'center',
             alignItems: 'center',
             height: '100vh',
             padding: '2%'
         }}>
             <div className={mainStyles.card} style={{
-                // backgroundColor: '#fff',
-                maxWidth: '500px',
+                maxWidth: '300px',
                 overflow: 'hidden'
             }}>
                 <Header title="Configurações" modalCtrl={modalCtrl} />

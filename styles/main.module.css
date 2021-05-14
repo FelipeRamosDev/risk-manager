@@ -9,6 +9,7 @@
     bottom: 0;
     left: 0;
     right: 0;
+    min-height: 100vh;
     overflow-y: scroll;
     background: url('../public/bg.svg'), radial-gradient(var(--primary-hardDark), var(--primary-dark));
     background-repeat: no-repeat;
@@ -75,7 +76,7 @@
     background-color: var(--primary-dark);
 }
 .card-gradient {
-    background: linear-gradient(45deg, var(--primary-main), var(--secondary-soft));
+    background: linear-gradient(45deg, var(--primary-alt1), var(--secondary-soft));
     border-radius: 10px;
     overflow: hidden;
 }
@@ -96,7 +97,7 @@
         padding: 2vh 0 5vh 0;
     }
     .flex-container{
-        flex-direction: column;
+        flex-direction: column-reverse;
     }
     .flex-item{
         width: 100%;

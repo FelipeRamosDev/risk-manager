@@ -110,7 +110,7 @@ export default function CalculateFormSectionComponent() {
                     startIcon={<ShowChartIcon />}
                     style={{
                         backgroundColor: 'var(--tertiary-soft)',
-                        marginTop: '30px'
+                        margin: '15px 0'
                     }}
                     onClick={()=> calculate({setResultData, data: {calcData, configData}})}
                 >

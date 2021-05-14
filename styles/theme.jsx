@@ -41,7 +41,8 @@ export const defaultTheme = {
         main: `hsl(${matrix[currentTheme].danger}, 100%, 62%)`
     },
     text: {
-        main: `hsl(${matrix[currentTheme].primary}, 100%, 100%)`,
+        main: `hsl(${matrix[currentTheme].primary}, 2%, 90%)`,
+        soft: `hsl(${matrix[currentTheme].primary}, 2%, 47%)`,
         dark: `hsl(${matrix[currentTheme].primary}, 3%, 3%)`
     }
 }

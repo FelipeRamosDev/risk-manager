@@ -124,7 +124,7 @@ function EvaluationComponent({data}){
                     alignItems: 'center'
                 }}
             >
-                <span style={{color: '#fff', textAlign: 'center'}}>{data.message || 'Insira os dados para calcular...'}</span>
+                <span style={{color: defaultTheme.text.main, textAlign: 'center'}}>{data.message || 'Insira os dados para calcular...'}</span>
             </div>
         </div>
     )

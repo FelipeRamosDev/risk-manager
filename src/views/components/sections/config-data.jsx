@@ -73,7 +73,8 @@ export default function ConfigDataSectionComponent(){
                     <Button
                         style={{
                             borderRadius: 0,
-                            color: 'var(--secondary-dark)'
+                            color: 'var(--secondary-dark)',
+                            backgroundColor: 'var(--primary-alt2)'
                         }}
                         onClick={()=> setModalCtrl(true)}
                     >Configurar</Button>

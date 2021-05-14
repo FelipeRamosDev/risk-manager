@@ -47,8 +47,10 @@ a {
 }
 * {
   --primary-main: hsl(var(--primary-hue), 100%, 40%);
-  --primary-dark: hsl(var(--primary-hue), 28%, 15%);
+  --primary-dark: hsl(var(--primary-hue), 22%, 13%);
   --primary-hardDark: hsl(var(--primary-hue), 15%, 10%);
+  --primary-alt1: hsl(var(--primary-hue), 100%, 21%);
+  --primary-alt2: hsl(var(--primary-hue), 34%, 23%);
 
   --secondary-main: hsl(var(--secondary-hue), 100%, 50%);
   --secondary-soft: hsl(var(--secondary-hue), 75%, 50%);
