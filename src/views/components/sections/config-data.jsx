@@ -44,7 +44,7 @@ export default function ConfigDataSectionComponent({setModalCtrl}){
                         <span>Risco máximo:</span>
                     </div>
                     <div value-field="" className={mainStyles['flex-item']}>
-                        <span>R$ {resultModel.results.maxLoss({configData, calcData})} ({configData.maxRisk || '--'}%)</span>
+                        <span>R$ {fixingNumbers(resultModel.results.maxLoss({configData, calcData}), 2)} ({configData.maxRisk || '--'}%)</span>
                     </div>
                 </div>
                 <div className={`${mainStyles['flex-container']}`} line-space="">

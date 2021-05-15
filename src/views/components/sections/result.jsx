@@ -9,7 +9,7 @@ import { useResultData } from '@/controllers/contexts/result-data';
 
 export default function ResultSectionComponent(){
     const { resultData } = useResultData();
-
+    
     return (
  
         <div className={mainStyles.card} style={{

@@ -55,9 +55,10 @@ CalculateResultModel.prototype.results = {
 
         return (maxRisk / 100) * totalBalance;
     },
-    maxQuantity: ({configData, calcData}, { maxLoss })=>{
+    maxQuantity: ({configData, calcData})=>{
         const {commission} = configData;
         const {currentCotation, stopLoss} = calcData;
+        const maxLoss = CalculateResultModel.prototype.results.maxLoss({configData, calcData});
 
         return (maxLoss - (commission * 2)) / (currentCotation - stopLoss);
     },
