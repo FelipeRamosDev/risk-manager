@@ -72,6 +72,7 @@ export default function ConfigDataSectionComponent({setModalCtrl}){
                             color: 'var(--secondary-dark)',
                             backgroundColor: 'var(--primary-alt2)'
                         }}
+                        startIcon={<i className="fas fa-cog" style={{fontSize: '1em'}}></i>}
                         onClick={()=> setModalCtrl(true)}
                     >Configurar</Button>
                 </div>

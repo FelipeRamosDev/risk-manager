@@ -26,7 +26,9 @@ export default function CalculateRiskActivity({setModalCtrl}){
 
     return (<>
         <div className={`${mainStyles.card} ${mainStyles.container}`} style={{padding: '3%', width: '95%', boxShadow: '0 0 74px black'}}>
-            <h1 style={{ textAlign: 'center', color: 'var(--text-main)', margin: '0 0 30px 0' }}>{textPTBR.title}</h1>
+            <h1 style={{ textAlign: 'center', color: 'var(--text-main)', margin: '0 0 30px 0' }}>
+                <i className="fas fa-calculator" style={{fontSize: '1em'}}></i> {textPTBR.title}
+            </h1>
 
             <div className={mainStyles['flex-container']}>
                 <div className={`${mainStyles['flex-item']} ${mainStyles['config-wrap']}`} >

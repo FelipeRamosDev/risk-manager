@@ -41,7 +41,7 @@ a {
   --primary-hue: 194;
   --secondary-hue: 154;
   --tertiary-hue: 348;
-  --success-hue: 128;
+  --success-hue: 140;
   --warn-hue: 46;
   --danger-hue: 0;
 }
@@ -53,6 +53,7 @@ a {
   --primary-alt2: hsl(var(--primary-hue), 34%, 23%);
 
   --secondary-main: hsl(var(--secondary-hue), 100%, 50%);
+  --secondary-light: hsl(var(--secondary-hue), 24%, 85%);
   --secondary-soft: hsl(var(--secondary-hue), 75%, 50%);
   --secondary-dark: hsl(var(--secondary-hue), 25%, 25%);
   --secondary-hardDark: hsl(var(--secondary-hue), 25%, 10%);
@@ -62,7 +63,7 @@ a {
   --tertiary-dark: hsl(var(--tertiary-hue), 25%, 15%);
   --tertiary-hardDark: hsl(var(--tertiary-hue), 25%, 10%);
   
-  --success-main: hsl(var(--success-hue), 80%, 43%);
+  --success-main: hsl(var(--success-hue), 92%, 47%);
   --warn-main: hsl(var(--warn-hue), 100%, 50%);
   --danger-main: hsl(var(--danger-hue), 89%, 54%);
 

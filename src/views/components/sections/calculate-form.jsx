@@ -39,7 +39,7 @@ export default function CalculateFormSectionComponent() {
     return (
 
         <form className={`${mainStyles['main-form']}`}>
-            <h2 style={{ marginTop: '0' }}>Dados do trade</h2>
+            <h2 style={{ marginTop: '0' }}><i class="fas fa-chart-line"></i> Dados do trade</h2>
 
             <div className={`${mainStyles['flex-container']}`} line-space="">
                 <div value-field="" className={mainStyles['flex-item']}>
@@ -107,7 +107,7 @@ export default function CalculateFormSectionComponent() {
                     variant="contained"
                     color="secondary"
                     size="large"
-                    startIcon={<ShowChartIcon />}
+                    startIcon={<i className="fas fa-calculator" style={{fontSize: '1em'}}></i>}
                     style={{
                         backgroundColor: 'var(--tertiary-soft)',
                         margin: '15px 0'

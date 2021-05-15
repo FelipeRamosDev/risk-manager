@@ -7,6 +7,13 @@ import { fixingNumbers } from '@/controllers/form-controller';
 // Contexts
 import { useResultData } from '@/controllers/contexts/result-data';
 
+// Styles
+const styles = {
+    hr: {
+        borderColor: 'var(--text-soft)'
+    }
+}
+
 export default function ResultSectionComponent(){
     const { resultData } = useResultData();
     
@@ -15,8 +22,8 @@ export default function ResultSectionComponent(){
         <div className={mainStyles.card} style={{
             backgroundColor: defaultTheme.primary.hardDark
         }}>
-            <div className={mainStyles.container} style={{color: 'var(--secondary-soft)' }}>
-                <h3>Resultado</h3>
+            <div className={mainStyles.container} style={{color: 'var(--secondary-light)' }}>
+                <h3><i class="fas fa-poll-h"></i> Resultado</h3>
 
                 {/* Quantidade máxima */}
                 <div className={`${mainStyles['flex-container']}`} line-space="">
@@ -37,7 +44,7 @@ export default function ResultSectionComponent(){
                         <span>R$ {fixingNumbers(resultData.totalInvest, 2)}</span>
                     </div>
                 </div> 
-                <hr />
+                <hr style={styles.hr} />
 
                 {/* Prejuízo projetado */}
                 <div className={`${mainStyles['flex-container']}`} line-space="">
@@ -58,7 +65,7 @@ export default function ResultSectionComponent(){
                         <span>R$ {fixingNumbers(resultData.projectedProfit, 2)}</span>
                     </div>
                 </div> 
-                <hr />
+                <hr style={styles.hr} />
 
                 {/* Montante ao sair */}
                 <div className={`${mainStyles['flex-container']}`} line-space="">
@@ -94,7 +101,7 @@ function EvaluationComponent({data}){
 
     if(data.status){
         if(data.result){
-            background = defaultTheme.success.main;
+            background = defaultTheme.secondary.soft;
         } else {
             background = defaultTheme.danger.main;
         }

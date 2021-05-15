@@ -8,7 +8,7 @@ export const matrix = {
         primary:194,
         secondary: 154,
         tertiary: 348,
-        success: 151,
+        success: 140,
         warn: 46,
         danger: 0
     }
@@ -22,6 +22,7 @@ export const defaultTheme = {
     },
     secondary: {
         main: `hsl(${matrix[currentTheme].secondary}, 100%, 50%)`,
+        soft: `hsl(${matrix[currentTheme].secondary}, 75%, 50%)`,
         dark: `hsl(${matrix[currentTheme].secondary}, 25%, 15%)`,
         hardDark: `hsl(${matrix[currentTheme].secondary}, 25%, 10%)`
     },
@@ -32,7 +33,7 @@ export const defaultTheme = {
         hardDark: `hsl(${matrix[currentTheme].tertiary}, 25%, 10%)`
     },
     success: {
-        main: `hsl(${matrix[currentTheme].success}, 69%,  26%)`
+        main: `hsl(${matrix[currentTheme].success}, 92%,  47%)`
     },
     warn: {
         main: `hsl(${matrix[currentTheme].warn}, 100%, 50%})`
