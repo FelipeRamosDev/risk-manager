@@ -83,7 +83,7 @@ function IsFirstAccess({setModalCtrl}){
       description="Antes de iniciar é necessário que você configure o app. Clique no botão abaixo para iniciar."
       hasButton={true}
       buttonText="Iniciar"
-      buttonHandler={()=> setConfigCtrl(true)}
+      buttonHandler={()=> setModalCtrl(true)}
     />
   )
 }
