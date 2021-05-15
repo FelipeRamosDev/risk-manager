@@ -37,16 +37,7 @@ export default function ResultSectionComponent(){
                         <span>R$ {fixingNumbers(resultData.totalInvest, 2)}</span>
                     </div>
                 </div> 
-
-                {/* Prejuízo máximo */}
-                <div className={`${mainStyles['flex-container']}`} line-space="">
-                    <div className={mainStyles['flex-item']}>
-                        <span>Prejuízo máximo:</span>
-                    </div>
-                    <div value-field="" className={mainStyles['flex-item']}>
-                        <span>R$ {fixingNumbers(resultData.maxLoss, 2)}</span>
-                    </div>
-                </div>
+                <hr />
 
                 {/* Prejuízo projetado */}
                 <div className={`${mainStyles['flex-container']}`} line-space="">
@@ -67,11 +58,12 @@ export default function ResultSectionComponent(){
                         <span>R$ {fixingNumbers(resultData.projectedProfit, 2)}</span>
                     </div>
                 </div> 
+                <hr />
 
                 {/* Montante ao sair */}
                 <div className={`${mainStyles['flex-container']}`} line-space="">
                     <div className={mainStyles['flex-item']}>
-                        <span>Montante ao sair:</span>
+                        <span>Lucro bruto:</span>
                     </div>
                     <div value-field="" className={mainStyles['flex-item']}>
                         <span>R$ {fixingNumbers(resultData.outAmount, 2)}</span>

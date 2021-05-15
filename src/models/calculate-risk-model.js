@@ -14,11 +14,13 @@ export class CalculateConfigModel{
     constructor(props = {
         totalBalance: Number(),
         maxRisk: Number(),
+        maxLoss: Number(),
         riskReturn: Number(),
         commission: Number()
     }){
         this.totalBalance = props.totalBalance;
         this.maxRisk = props.maxRisk;
+        this.maxLoss = props.maxLoss;
         this.riskReturn = props.riskReturn;
         this.commission = props.commission;
     }
@@ -26,7 +28,6 @@ export class CalculateConfigModel{
 
 export class CalculateResultModel{
     constructor(props = {
-        maxLoss: Number(),
         maxQuantity: Number(),
         totalInvest: Number(),
         projectedLoss: Number(),
@@ -35,7 +36,6 @@ export class CalculateResultModel{
         minTakeProfit: Number(),
         evaluation: new EvaluationModel(),
     }){
-        this.maxLoss = props.maxLoss;
         this.maxQuantity = props.maxQuantity;
         this.totalInvest = props.totalInvest;
         this.projectedLoss = props.projectedLoss;

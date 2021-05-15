@@ -35,7 +35,7 @@ export function calculate({setResultData, data}){
     let final = new CalculateResultModel();
     const {calcData, configData} = data;
 
-    final.maxLoss = results.maxLoss(data);
+    // final.maxLoss = results.maxLoss(data);
     final.maxQuantity = results.maxQuantity(data, final);
     final.totalInvest = results.totalInvest(data, final);
     final.projectedLoss = results.projectedLoss(data, final);

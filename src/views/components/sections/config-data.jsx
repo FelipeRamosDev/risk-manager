@@ -8,6 +8,9 @@ import { useCalcData } from '@/controllers/contexts/calc-data';
 import { useConfigData } from '@/controllers/contexts/config-data';
 import { useResultData } from '@/controllers/contexts/result-data';
 
+// Models
+import { CalculateResultModel } from '@/models/calculate-risk-model';
+
 // // Services
 import LocalStorageService from '@/controllers/services/local-storage';
 
@@ -15,9 +18,11 @@ import LocalStorageService from '@/controllers/services/local-storage';
 import mainStyles from 'styles/main.module.css';
 
 const ls = new LocalStorageService();
+const resultModel = new CalculateResultModel();
 
 export default function ConfigDataSectionComponent({setModalCtrl}){
     const { configData, setConfigData } = useConfigData();
+    const { calcData, setCalcData } = useCalcData();
 
     useEffect(()=>{
         ls.read({setter: setConfigData})
@@ -39,7 +44,7 @@ export default function ConfigDataSectionComponent({setModalCtrl}){
                         <span>Risco máximo:</span>
                     </div>
                     <div value-field="" className={mainStyles['flex-item']}>
-                        <span>{configData.maxRisk || '--'} %</span>
+                        <span>R$ {resultModel.results.maxLoss({configData, calcData})} ({configData.maxRisk || '--'}%)</span>
                     </div>
                 </div>
                 <div className={`${mainStyles['flex-container']}`} line-space="">
