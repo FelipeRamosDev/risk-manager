@@ -19,7 +19,7 @@ import { ptBR } from '@/views/text-content';
 // Main declarations
 const textPTBR = ptBR.calculateRisk;
 
-export default function CalculateRiskActivity(){
+export default function CalculateRiskActivity({setModalCtrl}){
     const { calcData, setCalcData } = useCalcData();
     const { configData, setConfigData } = useConfigData();
     const { resultData, setResultData } = useResultData();
@@ -33,7 +33,7 @@ export default function CalculateRiskActivity(){
                     <ResultSection />
                 </div>
                 <div className={mainStyles['flex-item']}>
-                    <ConfigDataSection />
+                    <ConfigDataSection setModalCtrl={setModalCtrl} />
                     <CalculateFormSection />
                 </div>
             </div>

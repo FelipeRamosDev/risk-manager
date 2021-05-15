@@ -16,7 +16,7 @@ import SaveIcon from '@material-ui/icons/Save';
 import mainStyles from 'styles/main.module.css';
 import { defaultTheme } from 'styles/theme';
 
-export default function ConfigModal({modalCtrl}){
+export default function ConfigModal({modalCtrl, addHandle}){
     const { configData, setConfigData } = useConfigData();
 
     return (
@@ -29,7 +29,7 @@ export default function ConfigModal({modalCtrl}){
             padding: '2%'
         }}>
             <div className={mainStyles.card} style={{
-                maxWidth: '300px',
+                maxWidth: '500px',
                 overflow: 'hidden'
             }}>
                 <Header title="Configurações" modalCtrl={modalCtrl} />
@@ -49,7 +49,10 @@ export default function ConfigModal({modalCtrl}){
                                 color: 'var(--secondary-dark)',
                                 marginTop: '30px'
                             }}
-                            onClick={()=> saveConfig({data: configData, modalCtrl })}
+                            onClick={()=> {
+                                saveConfig({data: configData, modalCtrl });
+                                if(addHandle) addHandle();
+                            }}
                         >Salvar</Button>
                     </div>
                 </div>

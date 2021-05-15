@@ -1,10 +1,5 @@
-import { useState, useRef, useEffect } from 'react';
-import Modal from '@material-ui/core/Modal';
+import { useEffect } from 'react';
 import Button from '@material-ui/core/Button';
-
-// Modals
-import ConfigModal from '@/views/components/modals/config-modal';
-
 // Controllers
 import { fixingNumbers } from '@/controllers/form-controller';
 
@@ -13,7 +8,7 @@ import { useCalcData } from '@/controllers/contexts/calc-data';
 import { useConfigData } from '@/controllers/contexts/config-data';
 import { useResultData } from '@/controllers/contexts/result-data';
 
-// Services
+// // Services
 import LocalStorageService from '@/controllers/services/local-storage';
 
 // Styles
@@ -21,12 +16,8 @@ import mainStyles from 'styles/main.module.css';
 
 const ls = new LocalStorageService();
 
-export default function ConfigDataSectionComponent(){
-    const { calcData, setCalcData } = useCalcData();
+export default function ConfigDataSectionComponent({setModalCtrl}){
     const { configData, setConfigData } = useConfigData();
-    const { resultData, setResultData } = useResultData();
-    const [ modalCtrl, setModalCtrl ] = useState(false)
-    let modalRef = useRef('config-modal');
 
     useEffect(()=>{
         ls.read({setter: setConfigData})
@@ -81,11 +72,5 @@ export default function ConfigDataSectionComponent(){
                 </div>
             </div>
         </div>
-        <Modal
-            open={modalCtrl}
-            ref={modalRef}
-        >
-            <ConfigModal modalCtrl={setModalCtrl} />
-        </Modal>
     </>);
 }
